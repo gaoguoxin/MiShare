@@ -13,6 +13,7 @@ html,body{
 		.head{
 			.img-container{
 				margin-top:36px;
+				@include clearfix;
 				img{
 					margin-bottom: 10px;
 				}
@@ -40,12 +41,16 @@ html,body{
 		}
 	}
 	.question{
-		// display:none;
 		font-size:14px;
-		// img{
-		// 	width:100%;
-		// }
+		.img-container{
+			margin-top:36px;
+			@include clearfix;
+			img{
+				margin-bottom: 10px;
+			}
+		}		
 		.q-info{
+			text-align:left;
 			margin-top:30px;
 			h4{
 				line-height: 2em;
