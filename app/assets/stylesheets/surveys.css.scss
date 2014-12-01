@@ -1,0 +1,111 @@
+@import "compass";
+html,body{
+	background:image-url("surveys/BG.png") no-repeat center center;
+}
+.container-fluid{
+	color:#fff;
+
+	.index,.question,.result{
+		display:none;
+	}
+
+	.index,.result{
+		.head{
+			.img-container{
+				margin-top:36px;
+				img{
+					margin-bottom: 10px;
+				}
+			}
+			h4,h5{
+				font-weight:normal !important;
+			}
+			span.num{
+				margin:0px 6px;
+			}
+		}
+		.cbody{
+			margin:50px 0px;
+			button.start{
+				background:#f36f6e;
+			}
+			button.share{
+				margin-top:20px;
+				color:#fff;
+				background:image-url("surveys/btn-bn.png") repeat-x repeat-y;
+				i{
+					margin-right:8px;
+				}
+			}
+		}
+	}
+	.question{
+		// display:none;
+		font-size:14px;
+		// img{
+		// 	width:100%;
+		// }
+		.q-info{
+			margin-top:30px;
+			h4{
+				line-height: 2em;
+			}
+		}
+		.radio{
+			i{
+				display:inline-block;
+				width:20px;
+				height:20px;
+				float:left;
+			}
+			.selection{
+				display:inline-block;
+				float:left;
+			}
+			&.active{
+				i{
+					color:#f36f6e;
+				}
+			}
+		}
+		button.next{
+			color:#fff;
+			background:#f36f6e;
+		}
+		.remainder{
+			margin-top:15px;
+			color:#f36f6e;
+		}
+	}
+
+
+
+	.line{
+		padding:0px !important;
+	}
+	button{
+		color:#fff;
+		outline:none;
+		&:hover,&:active{
+			color:#fff;
+		}
+	}
+	span.score{
+		color:#f36f6e;
+		font-size:20px;
+	}
+	.result-desc{
+		text-indent: 2em;
+		line-height: 2em;
+	}
+	.modal-content{
+		background:none !important;
+		img.share-btn{
+			position:absolute;
+			top:5px;
+			left:5px;
+		}
+	}
+
+
+}

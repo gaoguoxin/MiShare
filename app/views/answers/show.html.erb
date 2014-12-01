@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @answer.title %>
+</p>
+
+<p>
+  <strong>Question 1:</strong>
+  <%= @answer.question_1 %>
+</p>
+
+<p>
+  <strong>Question 2:</strong>
+  <%= @answer.question_2 %>
+</p>
+
+<p>
+  <strong>Question 3:</strong>
+  <%= @answer.question_3 %>
+</p>
+
+<p>
+  <strong>Question 4:</strong>
+  <%= @answer.question_4 %>
+</p>
+
+<p>
+  <strong>Question 5:</strong>
+  <%= @answer.question_5 %>
+</p>
+
+<p>
+  <strong>Question 6:</strong>
+  <%= @answer.question_6 %>
+</p>
+
+<p>
+  <strong>Question 7:</strong>
+  <%= @answer.question_7 %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @answer.status %>
+</p>
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>

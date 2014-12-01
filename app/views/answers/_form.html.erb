@@ -1,0 +1,53 @@
+<%= form_for(@answer) do |f| %>
+  <% if @answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+      <% @answer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :question_1 %><br>
+    <%= f.text_field :question_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :question_2 %><br>
+    <%= f.text_field :question_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :question_3 %><br>
+    <%= f.text_field :question_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :question_4 %><br>
+    <%= f.text_field :question_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :question_5 %><br>
+    <%= f.text_field :question_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :question_6 %><br>
+    <%= f.text_field :question_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :question_7 %><br>
+    <%= f.text_field :question_7 %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
