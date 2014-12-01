@@ -45,38 +45,6 @@ $(->
 
 	$('button.share').click(->
 		$('.modal').modal('show')
-		# WeixinApi.ready((Api)->
-		#     wxData = {
-		#         "link":'http://www.wenjuanba.com',
-		#         "title":"测测你的童年怀旧指数"
-		#     }
-		 
-		#     wxCallbacks = {
-		#         # #分享操作开始之前
-		#         # ready:function () {
-		#         # },
-		#         # #分享被用户自动取消
-		#         # cancel:function (resp) {
-		#         # },
-		#         # #分享失败了
-		#         # fail:function (resp) {
-		            
-		#         # },
-		#         # #分享成功
-		#         # confirm:function (resp) {
-		#         # },
-		#         # #整个分享过程结束
-		#         # all:function (resp) {
-		#         # }
-		#     }
-		 
-		#     #用户点开右上角popup菜单后，点击分享给好友，会执行下面这个代码
-		#     Api.shareToFriend(wxData, wxCallbacks)
-		 
-		#     #点击分享到朋友圈，会执行下面这个代码
-		#     Api.shareToTimeline(wxData, wxCallbacks)
-		# )
-
 	)
 
 
