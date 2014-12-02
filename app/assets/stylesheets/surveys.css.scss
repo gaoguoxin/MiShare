@@ -14,7 +14,7 @@ hr{
 	border : 0;
 	height : 2px;
 	background:image-url("surveys/btn-bg.png") repeat-x;
-	margin : 0px;
+	margin : 10px 0px 0px 0px;
 }
 	.begin,.result{
 		.head{
@@ -68,13 +68,9 @@ hr{
 				margin-top:0px;
 			}
 		}
-		// hr{
-		// 	margin:0px;
-		// 	border : 0;
-    //   height : 15px;
-		// 	background:image-url("surveys/btn-bg.png") repeat-x;
-    //   margin : 1em 0;
-		// }
+		hr{
+			margin:0px;
+		}
 		.radio{
 			i{
 				display:inline-block;
