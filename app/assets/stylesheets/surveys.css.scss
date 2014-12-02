@@ -6,17 +6,20 @@ html,body{
 .container-fluid{
 	color:#fff;
 	height:100%;
+
 	.begin,.question,.result{
 		display:none;
 	}
 
-hr{
-	border : 0;
-	height : 2px;
-	background:image-url("surveys/btn-bg.png") repeat-x;
-	margin : 10px 0px 0px 0px;
-}
+	hr{
+		border : 0;
+		height : 2px;
+		background:image-url("surveys/btn-bg.png") repeat-x;
+		margin : 10px 0px 0px 0px;
+	}
+
 	.begin,.result{
+		height:100vh;
 		.head{
 			.img-container{
 				margin-top:36px;
@@ -51,6 +54,7 @@ hr{
 		}
 	}
 	.question{
+		height:100vh;
 		font-size:14px;
 		.img-container{
 			// margin-top:36px;
