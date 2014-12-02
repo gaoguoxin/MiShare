@@ -1,8 +1,23 @@
 @import "compass";
 @import "surveys/*.png";
 html,body{
+	height:100%;
 	background:image-url("surveys/BG.png") no-repeat center center;
 }
+
+
+// html,body{
+//     height: 100%;
+// }
+//
+// html {
+//     background: image-url("surveys/BG.png") no-repeat center;
+// }
+//
+// body{
+// 	background:none !important;
+// }
+
 .container-fluid{
 	color:#fff;
 	height:100%;
@@ -19,7 +34,6 @@ html,body{
 	}
 
 	.begin,.result{
-		height:100vh;
 		.head{
 			.img-container{
 				margin-top:36px;
@@ -54,7 +68,6 @@ html,body{
 		}
 	}
 	.question{
-		height:100vh;
 		font-size:14px;
 		.img-container{
 			// margin-top:36px;

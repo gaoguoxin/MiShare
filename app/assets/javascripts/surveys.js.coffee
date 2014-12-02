@@ -1,6 +1,15 @@
 $(->
 	user_id = new Fingerprint({canvas: true}).get() #指纹识别
 
+	#屏幕转动时让body的高度为device的高度
+	orientationChange = ->
+		$('body').height(screen.height)
+
+	addEventListener('load', ->
+		orientationChange()
+		window.onorientationchange = orientationChange;
+	)
+
 	$.get("/answers/check",{user_id:user_id},(answer)->
 		if(answer.exist)
 			qidx = answer.q_idx
