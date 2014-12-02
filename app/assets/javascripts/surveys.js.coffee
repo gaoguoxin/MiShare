@@ -38,13 +38,6 @@ $(->
 		value  = $(this).data('value')
 		submit_answer($('.question:visible'),name,value)
 	)
-	#提交答案并进行下一题
-	# $('button.next').click(->
-	# 	answer = $('.question:visible  .radio.active')
-	# 	name   = answer.data('name')
-	# 	value  = answer.data('value')
-	# 	submit_answer($('.question:visible'),name,value)
-	# )
 
 	$('button.share').click(->
 		$('.modal').modal('show')

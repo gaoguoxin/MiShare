@@ -6,10 +6,16 @@ html,body{
 .container-fluid{
 	color:#fff;
 	height:100%;
-	.begin,.question,.result{
+	.question,.result{
 		display:none;
 	}
 
+hr{
+	border : 0;
+	height : 2px;
+	background:image-url("surveys/btn-bg.png") repeat-x;
+	margin : 0px;
+}
 	.begin,.result{
 		.head{
 			.img-container{
@@ -59,11 +65,16 @@ html,body{
 			text-align:left;
 			h4{
 				line-height: 2em;
+				margin-top:0px;
 			}
 		}
-		hr{
-			margin:0px;
-		}
+		// hr{
+		// 	margin:0px;
+		// 	border : 0;
+    //   height : 15px;
+		// 	background:image-url("surveys/btn-bg.png") repeat-x;
+    //   margin : 1em 0;
+		// }
 		.radio{
 			i{
 				display:inline-block;
@@ -74,6 +85,8 @@ html,body{
 			.selection{
 				display:inline-block;
 				float:left;
+				margin-top:5px;
+				margin-bottom:5px;
 			}
 			&.active{
 				i{
