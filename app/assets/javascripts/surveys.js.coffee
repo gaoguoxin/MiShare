@@ -11,12 +11,12 @@ $(->
 				else if (answer.score >= 60 &&  answer.score <= 120)
 					$('.result-desc').text('呃，您小的时候很宅么，那么多有趣的事儿，您居然很少参与，真是太可怜了，赶紧分享给好友，一起回忆和讨论一下你们童年都干过哪些糗事吧！')
 				else
-					$('.result-desc').text('哇塞，你居然还能想起来这么多，真的很了不起！您还想起了哪些童年的趣事呢？赶紧分享给好友吧，让我们一起怀念即将逝去的青春吧！')				
+					$('.result-desc').text('哇塞，你居然还能想起来这么多，真的很了不起！您还想起了哪些童年的趣事呢？赶紧分享给好友吧，让我们一起怀念即将逝去的青春吧！')
 				$('.result').show()
 			else
 				remove_prev_question(qidx)
 		else
-			$('.index').show()
+			$('.begin').css('display','block')
 	)
 
 	#根据用户答题进度，删除页面中已经回答过的问题并显示即将要回答的问题
@@ -27,21 +27,24 @@ $(->
 
 	#开始答题
 	$('button.start').click(->
-		$('.index').hide().siblings('#question_1').show()
+		$('.begin').hide().siblings('#question_1').show()
 	)
 
 	#变更选项
 	$('.radio').click(->
 		$(this).addClass('active').siblings('.radio').removeClass('active').find('i').removeClass('fa-dot-circle-o').addClass('fa-circle-o')
 		$(this).find('i').removeClass('fa-circle-o').addClass('fa-dot-circle-o')
-	)
-	#提交答案并进行下一题
-	$('button.next').click(->
-		answer = $('.question:visible  .radio.active')
-		name   = answer.data('name')
-		value  = answer.data('value')
+		name   = $(this).data('name')
+		value  = $(this).data('value')
 		submit_answer($('.question:visible'),name,value)
 	)
+	#提交答案并进行下一题
+	# $('button.next').click(->
+	# 	answer = $('.question:visible  .radio.active')
+	# 	name   = answer.data('name')
+	# 	value  = answer.data('value')
+	# 	submit_answer($('.question:visible'),name,value)
+	# )
 
 	$('button.share').click(->
 		$('.modal').modal('show')
@@ -63,7 +66,7 @@ $(->
 						$('.result-desc').text('呃，您小的时候很宅么，那么多有趣的事儿，您居然很少参与，真是太可怜了，赶紧分享给好友，一起回忆和讨论一下你们童年都干过哪些糗事吧！')
 					else
 						$('.result-desc').text('哇塞，你居然还能想起来这么多，真的很了不起！您还想起了哪些童年的趣事呢？赶紧分享给好友吧，让我们一起怀念即将逝去的青春吧！')
-					
+
 					$('.question').hide().siblings('.result').show()
 				else
 					obj.hide().next('.question').show()

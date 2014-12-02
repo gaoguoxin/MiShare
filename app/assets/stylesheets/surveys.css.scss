@@ -1,15 +1,16 @@
 @import "compass";
+@import "surveys/*.png";
 html,body{
 	background:image-url("surveys/BG.png") no-repeat center center;
 }
 .container-fluid{
 	color:#fff;
 	height:100%;
-	.index,.question,.result{
+	.begin,.question,.result{
 		display:none;
 	}
 
-	.index,.result{
+	.begin,.result{
 		.head{
 			.img-container{
 				margin-top:36px;
@@ -27,13 +28,16 @@ html,body{
 		}
 		.cbody{
 			margin:50px 0px;
+			&#cbody{
+				margin:20px 0px;
+			}
 			button.start{
 				background:#f36f6e;
 			}
 			button.share{
 				margin-top:20px;
 				color:#fff;
-				background:image-url("surveys/btn-bn.png") repeat-x repeat-y;
+				background:image-url("surveys/btn-bg.png");
 				i{
 					margin-right:8px;
 				}
@@ -43,18 +47,22 @@ html,body{
 	.question{
 		font-size:14px;
 		.img-container{
-			margin-top:36px;
+			// margin-top:36px;
 			@include clearfix;
 			img{
 				margin-bottom: 10px;
+				padding-left:0px;
+				padding-right:0px;
 			}
-		}		
+		}
 		.q-info{
 			text-align:left;
-			margin-top:30px;
 			h4{
 				line-height: 2em;
 			}
+		}
+		hr{
+			margin:0px;
 		}
 		.radio{
 			i{
@@ -78,15 +86,9 @@ html,body{
 			background:#f36f6e;
 		}
 		.remainder{
-			margin-top:15px;
+			margin-bottom:10px;
 			color:#f36f6e;
 		}
-	}
-
-
-
-	.line{
-		padding:0px !important;
 	}
 	button{
 		color:#fff;
@@ -97,7 +99,7 @@ html,body{
 	}
 	span.score{
 		color:#f36f6e;
-		font-size:20px;
+		font-size:24px;
 	}
 	.result-desc{
 		text-indent: 2em;
