@@ -34,6 +34,13 @@ html,body{
 	}
 
 	.begin,.result{
+		a.link{
+			color:#f36f6e;
+			text-decoration: none;
+			&:hover,&:active{
+				text-decoration: none;
+			}
+		}
 		.head{
 			.img-container{
 				margin-top:36px;
@@ -57,7 +64,7 @@ html,body{
 			button.start{
 				background:#f36f6e;
 			}
-			button.share{
+			button.share,a.share{
 				margin-top:20px;
 				color:#fff;
 				background:image-url("surveys/btn-bg.png");
@@ -123,7 +130,7 @@ html,body{
 			color:#fff;
 		}
 	}
-	span.score{
+	span.score,span.percent{
 		color:#f36f6e;
 		font-size:24px;
 	}

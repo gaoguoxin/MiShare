@@ -2,19 +2,20 @@ $(->
 	user_id = new Fingerprint({canvas: true}).get() #指纹识别
 
 	#屏幕转动时让body的高度为device的高度
-	orientationChange = ->
-		$('body').height(screen.height)
+	# orientationChange = ->
+	# 	$('body').height(screen.height)
 
-	addEventListener('load', ->
-		orientationChange()
-		window.onorientationchange = orientationChange;
-	)
+	# addEventListener('load', ->
+	# 	orientationChange()
+	# 	window.onorientationchange = orientationChange;
+	# )
 
 	$.get("/answers/check",{user_id:user_id},(answer)->
 		if(answer.exist)
 			qidx = answer.q_idx
 			if (qidx.length >= 15)
 				$('.result .score').text(answer.score)
+				$('.result .percent').text(answer.percent)
 				if(answer.score < 60)
 					$('.result-desc').text('很遗憾，从得分来看，您的童年一定很无趣，是否怀念你的童年呢？时间已悄然流逝，赶快分享快乐，抓住遗失的美好吧')
 				else if (answer.score >= 60 &&  answer.score <= 120)
@@ -62,6 +63,7 @@ $(->
 			if(data.success)
 				if data.idx == 'question_15'
 					$('.result .score').text(data.score)
+					$('.result .percent').text(data.percent)
 					if(data.score < 60)
 						$('.result-desc').text('很遗憾，从得分来看，您的童年一定很无趣，是否怀念你的童年呢？时间已悄然流逝，赶快分享快乐，抓住遗失的美好吧')
 					else if (data.score >= 60 &&  data.score <= 120)

@@ -47,4 +47,9 @@ class Answer
     end
     self.score = total
   end
+
+  def percent
+    con1 = Answer.where(:score.lt => self.score).count
+    return ((con1 / Answer.count.to_f) * 100).round(1).to_s + '%'
+  end
 end

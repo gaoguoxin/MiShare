@@ -3,16 +3,17 @@ class AnswersController < ApplicationController
   def check
     answer = Answer.where(user_id:params[:user_id]).first
     data = {exist:false,q_idx:1} #默认值，表示该用户答案不存在，那么从第一题开始显示
-    data[:exist] = true if answer
-    data[:q_idx] = answer.progress if answer
-    data[:score] = answer.score if answer
+    data[:exist]   = true if answer
+    data[:q_idx]   = answer.progress if answer
+    data[:score]   = answer.score if answer
+    data[:percent] = answer.percent if answer 
     render :json => data
   end
 
   def set_answer
     answer = Answer.where(user_id:params[:user_id]).first
     if answer.present?
-      render :json => {success:true,score:answer.score,idx:params[:name]} and return  if answer.update_attributes(params[:name].to_sym => params[:value])
+      render :json => {success:true,score:answer.score,idx:params[:name],percent:answer.percent} and return  if answer.update_attributes(params[:name].to_sym => params[:value])
       render :json => {success:false}
     else
       render :json => {success:true} and return  if Answer.create(params[:name].to_sym => params[:value],:user_id => params[:user_id])
