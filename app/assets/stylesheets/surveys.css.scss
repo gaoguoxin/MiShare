@@ -64,13 +64,18 @@ html,body{
 			button.start{
 				background:#f36f6e;
 			}
-			button.share,a.share{
+			button.share{
 				margin-top:20px;
 				color:#fff;
 				background:image-url("surveys/btn-bg.png");
 				i{
 					margin-right:8px;
 				}
+			}
+			a.at{
+				margin-top:20px;
+				color:#fff;
+				background:#f36f6e;				
 			}
 		}
 	}
