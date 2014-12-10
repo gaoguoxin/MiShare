@@ -1,4 +1,4 @@
-class Answer
+class Answer   # 童年小调查
   include Mongoid::Document
   include Mongoid::Timestamps
 

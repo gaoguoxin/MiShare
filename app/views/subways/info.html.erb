@@ -1,0 +1,75 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "info", :media => "all" %>
+<% end %>  
+<div class="container-fluid">
+  <div class="row">
+    <div class="img-container col-xs-8 col-xs-offset-2">
+      <%=image_tag "subway/stat.png", :alt => "logo", :class => '' %>
+      <h3>查询结果</h3> 
+    </div>
+  </div>
+
+  <div class="row">
+    <hr />
+  </div>  
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="result"><span class="total"><%= @year_incrase %></span>元</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <hr />
+    </div>
+  </div>
+  <div class="row query-info">
+    <div class="col-xs-6">
+      起始站：<span class='from'><%=@origin%></span>
+    </div>
+    <div class="col-xs-6 text-right">
+      结束站：<span class='to'><%=@destination%></span>
+    </div> 
+    <div class="col-xs-6">
+      公里数：<span class='distance'><%=@distance%>公里</span>
+    </div> 
+    <div class="col-xs-6 text-right">
+      票价：<span class='distance'><%=@price%>元</span>
+    </div>             
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <hr />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 description">每年成本增加1596元,相当于您一年扔了一个<span class='reward'><%= @reward %></span>,击败了全国<span class='percent'><%=@percent%></span>的用户。</div>
+  </div>  
+  <div class="row">
+    <div class="col-xs-12">
+      <a href="/subways" class="btn btn-block requery" role="button">重新查询</a>
+    </div>  
+  </div>
+
+  <div class="row">
+    <div class="btn-container col-xs-12">
+      <div class="row">
+        <div class="col-xs-6"><button class="btn btn-block social share"><i class="fa fa-share-alt"></i>一键分享</button></div>
+        <div class="col-xs-6"><button class="btn btn-block social foc"><i class="fa fa-plus"></i><a href='http://mp.weixin.qq.com/s?__biz=MjM5NTAzMjc1NA==&mid=205635380&idx=2&sn=50c5825ac63e6dd1f2603f93c9150e84&scene=4&uin=MTU5NzE0ODgyOA==&key=f2625319e5a9e31f9a821098ebc59c8fbeade924b5bd855802f0e00be9d2dadc0bb967a07823bb412411c850ff6eb443&devicetype=android-17&version=25020131&lang=zh_CN&pass_ticket=n0w%2FNMe%2FBsJR2sA%2BFnCtA2wrwmbHPTjEG2BOAufVgFKHUDoPtD18NZeyZBumB91%2B' class='link'>关注我们</a></button></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <%=image_tag "surveys/share.png", :alt => "share",:class => 'img-responsive  share-btn'%>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+

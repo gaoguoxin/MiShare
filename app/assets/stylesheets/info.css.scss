@@ -1,0 +1,83 @@
+@import "compass";
+html,body{
+	height:100%;
+	background:image-url("subway/BG.png") no-repeat center center;
+	.img-container{
+		padding:20px 0px 10px 0px;
+		img{
+			display:block;
+			margin:0 auto;
+			width:40px;
+		}
+		h3{
+			color:#fff;
+			text-align:center;
+		}
+	}
+	hr{
+		border : 0;
+		height : 2px;
+		background:image-url("surveys/btn-bg.png") repeat-x;
+		margin : 10px 0px 0px 0px;
+	}
+	.result{
+		margin-top:10px;
+		text-align:center;
+		color:#fff;
+		.total{
+			color:#ffca55;
+			font-size:40px;
+			font-weight:bold;
+		}
+	}
+	.query-info{
+		color:#fff;
+		.col-xs-6{
+			margin-top:10px;
+		}
+	}
+	.description{
+		padding-top:10px;
+		padding-bottom:10px;
+		color:#fff;
+		text-indent:2em;
+		line-height:2em;
+		.percent,.reward{
+			color:#ffa853;
+		}
+	}
+	.btn{
+		color:#fff;
+		background:#b18ed6;
+		outline:none;
+		&.social{
+			margin-top:10px;
+			background:image-url("subway/btn-bg.png") repeat-x;
+			border:1px solid #fff;
+			i{
+				margin-right:6px;
+			}
+			a{
+				color:#fff;
+				&:hover,&:active{
+					color:#fff;
+				}
+			}
+		}
+	}
+	.modal-content{
+		background:none !important;
+		img.share-btn{
+			position:absolute;
+			top:5px;
+			left:5px;
+		}
+	}
+
+
+
+
+
+
+
+}

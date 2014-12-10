@@ -1,0 +1,128 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "subways", :media => "all" %>
+<% end %>  
+<div class="container-fluid">
+  <div class="row">
+    <div class="img-container col-xs-4 col-xs-offset-4">
+      <%=image_tag "subway/subway.png", :alt => "subway",:class => 'img-responsive'%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center description">
+      <h4>地铁涨价了,查查你的开销吧！</h4>
+      <h5><%= @qtime %>次查询</h5>
+    </div>
+  </div>
+  <div class="row">
+    <hr />
+  </div>  
+  <div class="row selection">
+    <div class="col-xs-3">
+      <div class="start-icon">
+        <%=image_tag "subway/start.png", :alt => "start",:class => 'img-responsive'%>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="start-line">
+        <div class="dropdown line">
+          <button class="btn btn-default dropdown-toggle btn-block" type="button" id="startLine" data-toggle="dropdown" aria-expanded="false">选择线路</button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="startLine">
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='1'   href="javascript:void(0);">1号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='2'   href="javascript:void(0);">2号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='4'   href="javascript:void(0);">4号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='5'   href="javascript:void(0);">5号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='6'   href="javascript:void(0);">6号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='8'   href="javascript:void(0);">8号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='9'   href="javascript:void(0);">9号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='10'  href="javascript:void(0);">10号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='13'  href="javascript:void(0);">13号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='14'  href="javascript:void(0);">14号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='15'  href="javascript:void(0);">15号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='btx' href="javascript:void(0);">八通线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='cpx' href="javascript:void(0);">昌平线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='yzx' href="javascript:void(0);">亦庄线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='start' data-line='fsx' href="javascript:void(0);">房山线</a></li>
+          </ul>
+        </div>        
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="start-site">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle btn-block" type="button" id="startSite" data-toggle="dropdown" aria-expanded="false">选择站点</button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="startSite">
+          </ul>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <div class="row selection">
+    <div class="col-xs-3">
+      <div class="end-icon">
+        <%=image_tag "subway/end.png", :alt => "start",:class => 'img-responsive'%>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="end-line">
+        <div class="dropdown line">
+          <button class="btn btn-default dropdown-toggle btn-block" type="button" id="endLine" data-toggle="dropdown" aria-expanded="false">选择线路</button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="endLine">
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='1'   href="javascript:void(0);">1号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='2'   href="javascript:void(0);">2号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='4'   href="javascript:void(0);">4号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='5'   href="javascript:void(0);">5号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='6'   href="javascript:void(0);">6号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='8'   href="javascript:void(0);">8号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='9'   href="javascript:void(0);">9号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='10'  href="javascript:void(0);">10号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='13'  href="javascript:void(0);">13号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='14'  href="javascript:void(0);">14号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='15'  href="javascript:void(0);">15号线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='btx' href="javascript:void(0);">八通线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='cpx' href="javascript:void(0);">昌平线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='yzx' href="javascript:void(0);">亦庄线</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" data-line-type='end' data-line='fsx' href="javascript:void(0);">房山线</a></li>
+          </ul>
+        </div>        
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="end-site">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle btn-block" type="button" id="endSite" data-toggle="dropdown" aria-expanded="false">选择站点</button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="endSite">
+          </ul>
+        </div>        
+      </div>
+    </div>
+  </div>  
+  <div class="row">
+    <form action="/subways/info" method='get'>
+       <input type="hidden" name='origin' class='origin'>
+       <input type="hidden" name='destination' class='destination'>
+    </form>
+    <div class="btn-container col-xs-10 col-xs-offset-1">
+      <button class="btn btn-block btn-query">开始查询</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="btn-container col-xs-10 col-xs-offset-1">
+      <div class="row">
+        <div class="col-xs-6"><button class="btn btn-block social share"><i class="fa fa-share-alt"></i>一键分享</button></div>
+        <div class="col-xs-6"><button class="btn btn-block social foc"><i class="fa fa-plus"></i><a href='http://mp.weixin.qq.com/s?__biz=MjM5NTAzMjc1NA==&mid=205635380&idx=2&sn=50c5825ac63e6dd1f2603f93c9150e84&scene=4&uin=MTU5NzE0ODgyOA==&key=f2625319e5a9e31f9a821098ebc59c8fbeade924b5bd855802f0e00be9d2dadc0bb967a07823bb412411c850ff6eb443&devicetype=android-17&version=25020131&lang=zh_CN&pass_ticket=n0w%2FNMe%2FBsJR2sA%2BFnCtA2wrwmbHPTjEG2BOAufVgFKHUDoPtD18NZeyZBumB91%2B' class='link'>关注我们</a></button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <%=image_tag "surveys/share.png", :alt => "share",:class => 'img-responsive  share-btn'%>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+

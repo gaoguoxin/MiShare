@@ -1,0 +1,71 @@
+@import "compass";
+html,body{
+	height:100%;
+	background:image-url("subway/BG.png") no-repeat center center;
+	.container-fluid{
+		.img-container{
+			img{
+				margin:46px 0px 30px;
+			}
+		}
+		.description{
+			color:#fff;
+			h4,h5{
+				font-weight:normal !important;
+			}
+			h5{
+				color:#9798a5;
+			}
+		}
+		hr{
+			border : 0;
+			height : 2px;
+			background:image-url("surveys/btn-bg.png") repeat-x;
+			margin : 10px 0px 0px 0px;
+		}
+		.selection{
+			margin-top:15px;
+			.start-icon,.end-icon{
+				width:100%;
+				img{
+					width:34px;
+					height:34px;
+					margin:0 auto;
+				}
+			}
+			.col-xs-4{
+				padding:0px 5px !important;
+			}
+		}
+		.btn-container{
+			margin-top:15px;
+			padding:0px;
+			button{
+				color:#fff;
+				background:#b18ed6;
+				outline:none;
+				&.social{
+					background:image-url("subway/btn-bg.png") repeat-x;
+					border:1px solid #fff;
+					i{
+						margin-right:6px;
+					}
+					a{
+						color:#fff;
+						&:hover,&:active{
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
+		.modal-content{
+			background:none !important;
+			img.share-btn{
+				position:absolute;
+				top:5px;
+				left:5px;
+			}
+		}		
+	}
+}

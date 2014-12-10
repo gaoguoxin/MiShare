@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :subways do 
+    collection do 
+      get 'info'
+    end
+  end
+
   resources :answers do 
     collection do 
       get 'check'
