@@ -14,7 +14,7 @@
   </div>  
   <div class="row">
     <div class="col-xs-12">
-      <div class="result"><span class="total"><%= @year_incrase %></span>元</div>
+      <div class="result">每年多支出<span class="total"><%= @year_incrase %></span>元</div>
     </div>
   </div>
   <div class="row">
@@ -42,7 +42,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 description">每年成本增加1596元,相当于您一年扔了<span class='reward'><%= @reward %></span>,击败了全国<span class='percent'><%=@percent%></span>的用户。</div>
+    <div class="col-xs-12 description">出行成本增加了<span><%= @year_incrase%></span>元，相当于每年扔了<span class='reward'><%= @reward %></span>！多支出的交通费用击败了全国<span class='percent'><%=@percent%></span>的用户</div>
   </div>  
   <div class="row">
     <div class="col-xs-12">
