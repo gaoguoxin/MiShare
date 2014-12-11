@@ -38,7 +38,9 @@ html,body{
 			}
 			.dropdown{
 				ul.dropdown-menu{
-					min-width: 200px;
+					min-width: 210px;
+					max-height: 400px;
+					overflow:scroll;
 					li{
 						min-width:96px;
 						a{
