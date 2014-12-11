@@ -36,6 +36,23 @@ html,body{
 			.col-xs-4{
 				padding:0px 5px !important;
 			}
+			.dropdown{
+				ul.dropdown-menu{
+					min-width: 200px;
+					li{
+						min-width:96px;
+						a{
+							padding:10px;
+						}
+						&:nth-child(2n + 1){
+							float:left !important;
+						}
+						&:nth-child(2n){
+							float:right !important;
+						}
+					}
+				}
+			}
 		}
 		.btn-container{
 			margin-top:15px;

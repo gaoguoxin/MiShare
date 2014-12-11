@@ -85,19 +85,19 @@ class Subway
   def self.get_reward(year_increase)
     case year_increase
     when 528 
-      return '拍立得相机'
+      return '一瓶茅台酒'
     when 1056
-      return 'iPod'
+      return '一瓶迪奥“真我”香水'
     when 1584
-      return '魔音耳机'
+      return '一个蔻驰COCAH包'
     when 2112
-      return '小米4'
+      return '一部小米4手机'
     when 2640
-      return '华为荣耀6'
+      return '一部ipad'
     when 3168
-      return 'ipad mini3'
+      return '一部三星note3手机'
     when 3696 
-      return 'ipad'
+      return '大半个iPhone6'
     end 
   end
 
