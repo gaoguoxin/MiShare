@@ -43,7 +43,7 @@ class SubwaysController < ApplicationController
   end
 
   def get_title
-    @title  = '测测你的出行成本'
+    @title  = '算一算:地铁调价以后，每年多花多少钱?'
   end
 
 
