@@ -37,7 +37,7 @@ $(->
 	$('body').on('click','.btn-query',->
 		origin = $.trim($('input.origin').val())
 		destination = $.trim($('input.destination').val())
-		if origin.length > 0  && destination.length > 0
+		if origin.length > 0  && destination.length > 0 && origin != destination
 			if origin != '选择站点' && destination != 'destination'
 				$('form').submit()
 	)
