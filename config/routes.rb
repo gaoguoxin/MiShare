@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  resources :lyrics do 
+    collection do 
+      get 'result'
+      get 'answer'
+      get 'check'
+      post 'set_answer'
+    end
+  end
+
   resources :subways do 
     collection do 
       get 'info'
