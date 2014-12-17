@@ -1,0 +1,159 @@
+@import "compass";
+html,body{
+	height:100%;
+	background:image-url("surveys/BG.png") no-repeat center center;
+	.container-fluid{
+		color:#fff;
+		.lyric_begin{
+			h4,h5{
+				font-weight: normal !important;
+				&.head{
+					margin-top:30px;
+				}
+			}
+			hr{
+				border : 0;
+				height : 2px;
+				background:image-url("surveys/btn-bg.png") repeat-x;
+				margin : 10px 0px 0px 0px;
+			}
+			.cbody{
+				margin-bottom: 60px;
+				.btn.start{
+					margin-top:20px;
+					background: #75e3e0;
+					color:#fff;
+					text-decoration: none;
+				}
+				.btn.social{
+					margin-top:20px;
+					background:image-url("surveys/btn-bg.png");		
+					i{
+						margin-right:6px;
+					}
+					a{
+						color:#fff;
+						text-decoration: none;
+						&:hover,&:active{
+							text-decoration: none;
+						}
+					}			
+				}
+			}
+			.bottom{
+				position:fixed;
+				@include opacity(0.5);
+				bottom:10px;
+			}
+		}
+		.question{
+			display:none;
+			.img-container{
+				margin-top:15px;
+				margin-bottom:20px;
+				@include clearfix;
+				img{
+					padding:0px !important;
+				}
+			}
+			.q-info{
+				color:#75e3e0;
+			}
+			hr{
+				border : 0;
+				height : 2px;
+				background:image-url("surveys/btn-bg.png") repeat-x;
+				margin : 10px 0px 0px 0px;
+			}
+			.cbody{
+				margin-bottom: 40px;
+				.radio{
+					text-align:left;
+					i{
+						display:inline-block;
+						width:20px;
+						height:20px;
+					}
+					.selection{
+						display:inline-block;
+						margin-top:5px;
+						margin-bottom:5px;
+					}
+					&.active{
+						i{
+							color:#75e3e0;
+						}
+					}
+				}
+			}
+
+			.bottom{
+				width:100%;
+				text-align:center;
+				position:fixed;
+				bottom:0px;
+				@include opacity(0.5);
+				.remainder{
+					font-size:18px;
+					font-weight:bold;
+					color:#75e3e0;
+					float:right;
+				}
+			}						
+		}
+		.result{
+			color:#fff;
+			.bread{
+				@include opacity(0.5);
+			}
+			span.score,span.percent{
+				color:#75e3e0;
+				font-size:24px;
+			}
+			.btn.btn-block{
+				margin-top:20px;
+				background:#75e3e0;
+				color:#fff;
+				&.social{
+					i{
+						margin-right:6px;
+					}
+					a{
+						color:#fff;
+						text-decoration: none;
+						&:hover,&:active{
+							text-decoration: none;
+						}
+					}
+					background:image-url("surveys/btn-bg.png");						
+				}
+			}
+			.result-desc{
+				margin-top:20px;
+				text-indent: 2em;
+				text-align:left;
+			}
+			.bottom{
+				width:100%;
+				text-align:center;
+				position:fixed;
+				bottom:0px;
+				@include opacity(0.5);
+				.remainder{
+					font-size:18px;
+					font-weight:bold;
+					color:#75e3e0;
+					float:right;
+				}
+			}							
+		}	
+	}
+	.modal-content{
+		background:none !important;
+		img.share-btn{
+			position:absolute;
+			top:5px;
+			left:5px;
+		}
+	}		
+}
