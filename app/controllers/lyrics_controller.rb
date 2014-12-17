@@ -39,6 +39,6 @@ class LyricsController < ApplicationController
 
 	private
 	def get_title
-		@title = '我爱记歌词'
+		@title = '我爱背歌词'
 	end
 end
