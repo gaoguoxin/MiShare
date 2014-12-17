@@ -1,6 +1,7 @@
 class LyricsController < ApplicationController
 	before_action :get_title
 	def index
+		@count = Lyric.count
 	end
 
 	def answer
