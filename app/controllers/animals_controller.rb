@@ -38,6 +38,6 @@ class AnimalsController < ApplicationController
 
 	private
 	def get_title
-		@title = 'MBTI性格分析:看看你是哪种动物'
+		@title = 'MBTI性格分析:看看你是哪种动物?超准!'
 	end
 end

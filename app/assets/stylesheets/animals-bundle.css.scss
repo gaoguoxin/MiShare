@@ -5,6 +5,9 @@ html,body{
 	.container-fluid{
 		color:#fff;
 		.animal_begin{
+			.img-container{
+				padding-top:20px;
+			}
 			h4,h5{
 				font-weight: normal !important;
 				&.head{

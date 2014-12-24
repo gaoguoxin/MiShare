@@ -1,5 +1,11 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "animals-bundle", :media => "all" %>
+  <script type='text/javascript'>
+    window.result   = "<%=show_result(@animal.result)[1]%>";
+    window.animal   = window.result.split(':')[1]
+    window.a_title  = "我居然是" + window.animal + ' ' +  document.title;
+    window.img      = "<%= asset_path(show_result(@animal.result)[0]) %>";
+  </script>
 <% end %>
 
 <!-- last page start -->

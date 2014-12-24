@@ -1,6 +1,8 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "animals-bundle", :media => "all" %>
   <script type="text/javascript">
+    window.a_title  = document.title;
+    window.img      = "<%= asset_path('animals/logo.png') %>";  
   $(function(){
     window.controller = "<%= controller_name %>";
     window.qdx = "<%= @animal.try(:progress) %>" ;
