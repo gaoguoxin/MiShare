@@ -1,0 +1,141 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "animals-bundle", :media => "all" %>
+  <script type="text/javascript">
+  $(function(){
+    window.controller = "<%= controller_name %>";
+    window.qdx = "<%= @animal.try(:progress) %>" ;
+    if(window.qdx){
+      $("#question_" + window.qdx ).prevAll().remove()
+      $("#question_" + window.qdx ).show()
+    }else{
+      $("#question_1").show()
+    }    
+  })
+  </script>
+<% end %>
+
+
+<div class="container-fluid">
+<!-- question page start -->
+<div class="question text-center" id="question_1">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <div class="img-container">
+        <%=image_tag "animals/answer.png", :alt => "q1", :class => 'col-xs-4 col-xs-offset-4' %>
+      </div>
+      <div class=''>
+        <h3>第一个维度:定位</h3>
+      </div>      
+      <div class='q-info'>
+        <h4>1、问问自己:你愿意出去找乐子,还是宁愿呆在家里读一本好书或看电视?</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <hr />
+  </div>
+  <div class="row">
+    <div class="col-xs-12 cbody">
+      <div class="row">
+        <div class="col-xs-12 animal radio " data-name="question_1" data-value="E"><h4 class='selection'><i class="ipt fa fa-circle-o"></i>出去找乐子</h4></div>
+        <div class="col-xs-12 animal radio " data-name="question_1" data-value="I"><h4 class='selection'><i class="ipt fa fa-circle-o"></i>在家里读书或者看电视</h4></div>
+      </div>
+    </div>
+  </div>
+  <div class="row bottom">
+    <div class="col-xs-12"><span class="remainder">01/4题</span> </div>  
+  </div>
+</div>
+
+<div class="question text-center" id="question_2">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <div class="img-container">
+        <%=image_tag "animals/answer.png", :alt => "q1", :class => 'col-xs-4 col-xs-offset-4' %>
+      </div>
+      <div class=''>
+        <h3>第二个维度:悟性</h3>
+      </div>
+      <div class='q-info'>
+        <h4>2、问问自己:当你学习新东西时,你是所见即所学还是根据自己得直觉添加/删除印象?</h4>
+      </div>      
+    </div>
+  </div>
+  <div class="row">
+    <hr />
+  </div>
+  <div class="row">
+    <div class="col-xs-12 cbody">
+      <div class="row">
+        <div class="col-xs-12 animal radio " data-name="question_2" data-value="S"><h4 class='selection'><i class="ipt fa fa-circle-o"></i>所见即所学</h4></div>
+        <div class="col-xs-12 animal radio " data-name="question_2" data-value="N"><h4 class='selection'><i class="ipt fa fa-circle-o"></i>根据直觉添加/删除印象</h4></div>
+      </div>
+    </div>
+  </div>
+  <div class="row bottom">
+    <div class="col-xs-12"><span class="remainder">02/4题</span> </div>  
+  </div>
+</div>
+
+<div class="question text-center" id="question_3">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <div class="img-container">
+        <%=image_tag "animals/answer.png", :alt => "q1", :class => 'col-xs-4 col-xs-offset-4' %>
+      </div>
+      <div class=''>
+        <h3>第三个维度:决定</h3>
+      </div>      
+      <div class='q-info'>
+        <h4>问问自己:当你对某件事做出决定时,你依靠逻辑推理还是倾向于情感?</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <hr />
+  </div>
+  <div class="row">
+    <div class="col-xs-12 cbody">
+      <div class="row">
+        <div class="col-xs-12 animal radio " data-name="question_3" data-value="T"><h4 class='selection'><i class="ipt fa fa-circle-o"></i>依靠逻辑推理</h4></div>
+        <div class="col-xs-12 animal radio " data-name="question_3" data-value="F"><h4 class='selection'><i class="ipt fa fa-circle-o"></i>倾向于情感</h4></div>
+      </div>
+    </div>
+  </div>
+  <div class="row bottom">
+    <div class="col-xs-12"><span class="remainder">03/4题</span> </div>  
+  </div>
+</div>
+
+<div class="question text-center" id="question_4">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <div class="img-container">
+        <%=image_tag "animals/answer.png", :alt => "q1", :class => 'col-xs-4 col-xs-offset-4' %>
+      </div>
+      <div class=''>
+        <h3>第四个维度:态度</h3>
+      </div>        
+      <div class='q-info'>
+        <h4>问问自己:你愿意自己的生活各个方面都井井有条预先安排,还是喜欢突如其来,令人惊喜?</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <hr />
+  </div>
+  <div class="row">
+    <div class="col-xs-12 cbody">
+      <div class="row">
+        <div class="col-xs-12 animal radio " data-name="question_4" data-value="J"><h4 class='selection'><i class="ipt fa fa-circle-o"></i>井井有条,预先安排</h4></div>
+        <div class="col-xs-12 animal radio " data-name="question_4" data-value="P"><h4 class='selection'><i class="ipt fa fa-circle-o"></i>突如其来,令人惊喜</h4></div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="row bottom">
+    <div class="col-xs-12"><span class="remainder">04/4题</span> </div>  
+  </div>
+</div>   
+<!-- question page end   -->
+</div>
