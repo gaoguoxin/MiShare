@@ -99,7 +99,7 @@ html,body{
 				width:100%;
 				text-align:center;
 				position:fixed;
-				bottom:10px;
+				bottom:0px;
 				@include opacity(0.5);
 				.remainder{
 					font-size:18px;
@@ -135,6 +135,9 @@ html,body{
 					}
 					background:image-url("surveys/btn-bg.png");						
 				}
+			}
+			.cbody{
+				margin-bottom:30px;
 			}
 			.result-desc{
 				margin-top:20px;
