@@ -14,7 +14,7 @@ $(->
 		wxData = {
 			"appId": "", 
 			"imgUrl" : window.location.origin + '/' + window.img,
-			"link" : '',
+			"link" : window.location.origin + '/animals',
 			"desc" : '',
 			"title" : window.a_title
 		}
