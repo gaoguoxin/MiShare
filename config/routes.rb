@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :animals do 
+    collection do 
+      get 'result'
+      get 'answer'
+      get 'check'
+      post 'set_answer'
+    end    
+  end
+
   resources :lyrics do 
     collection do 
       get 'result'
