@@ -1,0 +1,225 @@
+@import "compass";
+html,body{
+	height:100%;
+	background:image-url("surveys/BG.png") no-repeat center center;
+	.container-fluid{
+		color:#fff;
+		.guess_begin{
+			h4,h5{
+				font-weight: normal !important;
+				&.head{
+					margin-top:30px;
+				}
+			}
+			.img-container{
+				@include clearfix;
+				padding-top:20px;
+			}
+			hr{
+				border : 0;
+				height : 2px;
+				background:image-url("surveys/btn-bg.png") repeat-x;
+				margin : 10px 0px 0px 0px;
+			}
+			.cbody{
+				margin-bottom: 60px;
+				.btn.start{
+					margin-top:20px;
+					background: #75e3e0;
+					color:#fff;
+					text-decoration: none;
+				}
+				.btn.social{
+					margin-top:20px;
+					background:image-url("surveys/btn-bg.png");		
+					i{
+						margin-right:6px;
+					}
+					a{
+						color:#fff;
+						text-decoration: none;
+						&:hover,&:active{
+							text-decoration: none;
+						}
+					}			
+				}
+			}
+			.bottom{
+				position:fixed;
+				@include opacity(0.5);
+				bottom:10px;
+			}
+		}
+		.question{
+			display:none;
+			.head{
+				padding:0px !important;
+				position:relative;
+				img{
+					display:none;
+				}
+				.origin{
+					display:none;
+					position:absolute;
+					top: 0px;
+					left: 0px;						
+					z-index: 1;
+				}
+				.mistiness{
+					position:absolute;
+					top: 0px;
+					left: 0px;							
+					z-index: 2;
+				}				
+			}
+
+			.q-info{
+				color:#75e3e0;
+			}
+			hr{
+				border : 0;
+				height : 2px;
+				background:image-url("surveys/btn-bg.png") repeat-x;
+				margin : 10px 0px 0px 0px;
+			}
+			.cbody{
+				margin-bottom: 40px;
+				.radio{
+					text-align:left;
+					i{
+						display:inline-block;
+						width:20px;
+						height:20px;
+					}
+					.selection{
+						display:inline-block;
+						margin-top:5px;
+						margin-bottom:5px;
+					}
+					&.active{
+						i{
+							color:#75e3e0;
+						}
+					}
+				}
+			}
+
+			.bottom{
+				width:100%;
+				text-align:center;
+				position:fixed;
+				bottom:0px;
+				@include opacity(0.5);
+				.remainder{
+					font-size:18px;
+					font-weight:bold;
+					color:#75e3e0;
+					float:right;
+				}
+			}						
+		}
+		.result{
+			color:#fff;
+			.img-wraper{
+				padding:0px;
+				position:relative;
+				span{
+					display:inline-block;
+					position:absolute;
+					bottom:0px;
+					left:0px;
+					background:#ccc;
+					@include opacity(0.8);
+					color:#ec1717;
+					width:100%;
+					&.o{
+						color:#4cae4c;
+					}
+					&.x{
+						color:#d43f3a;
+					}
+				}
+				i{
+					position:absolute;
+					top:2px;
+					right:2px;
+					&.o{
+						color:#4cae4c;
+					}
+					&.x{
+						color:#d43f3a;
+					}
+				}
+			}
+			.bread{
+				@include opacity(0.5);
+			}
+			span.score,span.percent{
+				color:#75e3e0;
+				font-size:24px;
+			}
+			.btn.btn-block{
+				margin-top:20px;
+				background:#75e3e0;
+				color:#fff;
+				&.social{
+					i{
+						margin-right:6px;
+					}
+					a{
+						color:#fff;
+						text-decoration: none;
+						&:hover,&:active{
+							text-decoration: none;
+						}
+					}
+					background:image-url("surveys/btn-bg.png");						
+				}
+			}
+			.result-desc{
+				margin-top:20px;
+				text-indent: 2em;
+				text-align:left;
+			}
+			.bottom{
+				width:100%;
+				text-align:center;
+				position:fixed;
+				bottom:0px;
+				@include opacity(0.5);
+				.remainder{
+					font-size:18px;
+					font-weight:bold;
+					color:#75e3e0;
+					float:right;
+				}
+			}							
+		}	
+	}
+	.modal-dialog.guess{
+		margin:0px;
+		.modal-content{
+			@include clearfix;
+			.list-group-item{
+				i{
+					margin-right:6px;
+				}
+				&.active{
+					background:#eeeeee;
+					color:#777777;
+					border-color:#eeeeee;
+				}
+			}
+		}
+	}
+
+	.modal-content{
+		background:none !important;
+		img.share-btn{
+			position:absolute;
+			top:5px;
+			left:5px;
+		}
+	}
+
+}

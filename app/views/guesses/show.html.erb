@@ -1,0 +1,217 @@
+<% content_for :head do %>
+  <%= stylesheet_link_tag "guesses-bundle", :media => "all" %>
+  <script type="text/javascript">
+  $(function(){
+    window.controller = "<%= controller_name %>";
+    window.qdx = "<%= params[:id] %>" ;
+    if(window.qdx){
+      $("#question_" + window.qdx ).siblings().remove()
+      $("#question_" + window.qdx ).show()
+      $(".panel-body.question_" + window.qdx).siblings('.panel-body').remove()
+    }else{
+      $("#question_1").siblings().remove()
+      $("#question_1").show()
+    } 
+
+    function init( event ) {
+      body = $('body');
+      $('img.orgin,img.mistiness').width(body.width());
+      $('img.orgin,img.mistiness').height(body.height());       
+      $(".mistiness").eraser();
+      $('.origin').show();
+    }
+
+    function orientationChange() {
+        $('.origin').hide();
+        window.location.reload()
+    }
+
+    function showModal(e){
+      if($(e.target).hasClass('mistiness')){
+        $('.modal').modal('show')
+      }
+    }
+
+
+    document.addEventListener('touchend',showModal, false); 
+
+    addEventListener( "load", init, false );
+    addEventListener('load', function(){
+        window.onorientationchange = orientationChange;
+    })
+
+  })
+  </script>
+
+<script type = "text/javascript">
+</script>
+<% end %>
+
+
+<div class="container-fluid">
+<!-- question page start -->
+<div class="question text-center" id="question_1">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <%=image_tag "guess/q1_o.jpg", :alt => "q1", :class => 'q1_o  origin img-responsive' %>
+      <%=image_tag "guess/q1_m.jpg", :alt => "q1", :class => 'q1_m  mistiness' %>
+    </div>
+  </div>
+</div>
+
+<div class="question text-center" id="question_2">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <%=image_tag "guess/q2_o.jpg", :alt => "q2", :class => 'q2_o  origin img-responsive' %>
+      <%=image_tag "guess/q2_m.jpg", :alt => "q2", :class => 'q2_m  mistiness img-responsive' %>
+    </div>
+  </div>
+</div>
+
+<div class="question text-center" id="question_3">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <%=image_tag "guess/q3_o.jpg", :alt => "q3", :class => 'q3_o  origin img-responsive' %>
+      <%=image_tag "guess/q3_m.jpg", :alt => "q3", :class => 'q3_m  mistiness img-responsive' %>
+    </div>
+  </div>
+</div>
+
+<div class="question text-center" id="question_4">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <%=image_tag "guess/q4_o.jpg", :alt => "q4", :class => 'q4_o  origin img-responsive' %>
+      <%=image_tag "guess/q4_m.jpeg", :alt => "q4", :class => 'q4_m  mistiness img-responsive' %>
+    </div>
+  </div>
+</div>
+
+<div class="question text-center" id="question_5">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <%=image_tag "guess/q5_o.jpg", :alt => "q5", :class => 'q5_o  origin img-responsive' %>
+      <%=image_tag "guess/q5_m.jpg", :alt => "q5", :class => 'q5_m  mistiness img-responsive' %>
+    </div>
+  </div>
+</div>  
+
+<div class="question text-center" id="question_6">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <%=image_tag "guess/q6_o.jpg", :alt => "q6", :class => 'q6_o  origin img-responsive' %>
+      <%=image_tag "guess/q6_m.jpg", :alt => "q6", :class => 'q6_m  mistiness img-responsive' %>
+    </div>
+  </div>
+</div> 
+
+<div class="question text-center" id="question_7">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <%=image_tag "guess/q7_o.jpg", :alt => "q7", :class => 'q7_o  origin img-responsive' %>
+      <%=image_tag "guess/q7_m.jpg", :alt => "q7", :class => 'q7_m  mistiness img-responsive' %>
+    </div>
+  </div>
+</div> 
+
+<div class="question text-center" id="question_8">
+  <div class="row">
+    <div class="col-xs-12 head">
+      <%=image_tag "guess/q8_o.jpg", :alt => "q8", :class => 'q8_o  origin img-responsive' %>
+      <%=image_tag "guess/q8_m.jpg", :alt => "q8", :class => 'q8_m  mistiness img-responsive' %>
+    </div>
+  </div>
+</div>   
+<!-- question page end   -->
+</div>
+
+  <div class="modal fade bs-example-modal-lg guess" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg guess">
+      <div class="modal-content">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center">你能猜到我是谁吗？</h3>
+          </div>
+          <div class="panel-body question_1">
+            <ul class="list-group">
+              <li class="list-group-item" data-name='question_1' data-value="10"><i class="ipt fa fa-circle-o"></i><span>柳岩</span></li>
+              <li class="list-group-item" data-name='question_1' data-value="0"><i class="ipt fa fa-circle-o"></i><span>范冰冰</span></li>
+              <li class="list-group-item" data-name='question_1' data-value="0"><i class="ipt fa fa-circle-o"></i><span>黄圣依</span></li>
+              <li class="list-group-item" data-name='question_1' data-value="0"><i class="ipt fa fa-circle-o"></i><span>杨幂</span></li>
+            </ul>           
+          </div>
+
+          <div class="panel-body question_2">
+            <ul class="list-group">
+              <li class="list-group-item" data-name='question_2' data-value="0"><i class="ipt fa fa-circle-o"></i><span>高圆圆</span></li>
+              <li class="list-group-item" data-name='question_2' data-value="0"><i class="ipt fa fa-circle-o"></i><span>赵丽颖</span></li>
+              <li class="list-group-item" data-name='question_2' data-value="10"><i class="ipt fa fa-circle-o"></i><span>范冰冰</span></li>
+              <li class="list-group-item" data-name='question_2' data-value="0"><i class="ipt fa fa-circle-o"></i><span>林志玲</span></li>
+            </ul>           
+          </div>
+
+
+          <div class="panel-body question_3">
+            <ul class="list-group">
+              <li class="list-group-item" data-name='question_3' data-value="0"><i class="ipt fa fa-circle-o"></i><span>林志玲</span></li>
+              <li class="list-group-item" data-name='question_3' data-value="0"><i class="ipt fa fa-circle-o"></i><span>刘诗诗</span></li>
+              <li class="list-group-item" data-name='question_3' data-value="10"><i class="ipt fa fa-circle-o"></i><span>李冰冰</span></li>
+              <li class="list-group-item" data-name='question_3' data-value="0"><i class="ipt fa fa-circle-o"></i><span>林心如</span></li>
+            </ul>           
+          </div>
+
+
+
+          <div class="panel-body question_4">
+            <ul class="list-group">
+              <li class="list-group-item" data-name='question_4' data-value="0"><i class="ipt fa fa-circle-o"></i><span>乌兰诺娃</span></li>
+              <li class="list-group-item" data-name='question_4' data-value="0"><i class="ipt fa fa-circle-o"></i><span>吉莉安·莫菲</span></li>
+              <li class="list-group-item" data-name='question_4' data-value="10"><i class="ipt fa fa-circle-o"></i><span>奥黛丽·赫本</span></li>
+              <li class="list-group-item" data-name='question_4' data-value="0"><i class="ipt fa fa-circle-o"></i><span>艾薇儿</span></li>
+            </ul>            
+          </div>
+
+
+          <div class="panel-body question_5">
+            <ul class="list-group">
+              <li class="list-group-item" data-name='question_5' data-value="0"><i class="ipt fa fa-circle-o"></i><span>蔡依林</span></li>
+              <li class="list-group-item" data-name='question_5' data-value="10"><i class="ipt fa fa-circle-o"></i><span>anglelababy</span></li>
+              <li class="list-group-item" data-name='question_5' data-value="0"><i class="ipt fa fa-circle-o"></i><span>李冰冰</span></li>
+              <li class="list-group-item" data-name='question_5' data-value="0"><i class="ipt fa fa-circle-o"></i><span>范冰冰</span></li>
+            </ul>            
+          </div>
+
+
+          <div class="panel-body question_6">
+            <ul class="list-group">
+              <li class="list-group-item" data-name='question_6' data-value="10"><i class="ipt fa fa-circle-o"></i><span>张馨予</span></li>
+              <li class="list-group-item" data-name='question_6' data-value="0"><i class="ipt fa fa-circle-o"></i><span>anglelababy</span></li>
+              <li class="list-group-item" data-name='question_6' data-value="0"><i class="ipt fa fa-circle-o"></i><span>安以轩</span></li>
+              <li class="list-group-item" data-name='question_6' data-value="0"><i class="ipt fa fa-circle-o"></i><span>柳岩</span></li>
+            </ul>           
+          </div>
+
+
+          <div class="panel-body question_7">
+            <ul class="list-group">
+              <li class="list-group-item" data-name='question_7' data-value="0"><i class="ipt fa fa-circle-o"></i><span>泰勒·斯威夫特</span></li>
+              <li class="list-group-item" data-name='question_7' data-value="10"><i class="ipt fa fa-circle-o"></i><span>阿曼达·塞弗里德</span></li>
+              <li class="list-group-item" data-name='question_7' data-value="0"><i class="ipt fa fa-circle-o"></i><span>艾玛·沃特森</span></li>
+              <li class="list-group-item" data-name='question_7' data-value="0"><i class="ipt fa fa-circle-o"></i><span>米兰达·可儿</span></li>
+            </ul>           
+          </div>
+
+
+          <div class="panel-body question_8">
+            <ul class="list-group">
+              <li class="list-group-item" data-name='question_8' data-value="0"><i class="ipt fa fa-circle-o"></i><span>范冰冰</span></li>
+              <li class="list-group-item" data-name='question_8' data-value="0"><i class="ipt fa fa-circle-o"></i><span>郑秀妍</span></li>
+              <li class="list-group-item" data-name='question_8' data-value="10"><i class="ipt fa fa-circle-o"></i><span>佟丽娅</span></li>
+              <li class="list-group-item" data-name='question_8' data-value="0"><i class="ipt fa fa-circle-o"></i><span>谢娜</span></li>
+            </ul>           
+          </div>                                                            
+
+        </div>
+      </div>        
+      </div>
+    </div>
+  </div>
