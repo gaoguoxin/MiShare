@@ -26,14 +26,30 @@
         window.location.reload()
     }
 
-    function showModal(e){
+    function showSlide(e){
       if($(e.target).hasClass('mistiness')){
-        $('.modal').modal('show')
+        $('.slideBtn').show()
       }
     }
 
+    function hideSlide(e){
+      if($(e.target).hasClass('mistiness')){
+        $('.slideBtn').hide()
+      }      
+    }
 
-    document.addEventListener('touchend',showModal, false); 
+
+    $('.question .slideBtn img').click(function(e){
+      $(this).parents('.slideBtn').hide();
+      $('.modal').modal('show')
+    });
+
+    $('.slideUp img').click(function(e){
+      $('.modal').modal('hide')
+    });    
+
+    document.addEventListener('touchend',showSlide, false); 
+    document.addEventListener('touchstart',hideSlide, false); 
 
     addEventListener( "load", init, false );
     addEventListener('load', function(){
@@ -56,6 +72,9 @@
       <%=image_tag "guess/q1_o.jpg", :alt => "q1", :class => 'q1_o  origin img-responsive' %>
       <%=image_tag "guess/q1_m.jpg", :alt => "q1", :class => 'q1_m  mistiness' %>
     </div>
+    <div class="slideBtn">
+      <%=image_tag "guess/2.png", :alt => "slide"%>
+    </div>    
   </div>
 </div>
 
@@ -65,6 +84,9 @@
       <%=image_tag "guess/q2_o.jpg", :alt => "q2", :class => 'q2_o  origin img-responsive' %>
       <%=image_tag "guess/q2_m.jpg", :alt => "q2", :class => 'q2_m  mistiness img-responsive' %>
     </div>
+    <div class="slideBtn">
+      <%=image_tag "guess/2.png", :alt => "slide"%>
+    </div>      
   </div>
 </div>
 
@@ -74,6 +96,9 @@
       <%=image_tag "guess/q3_o.jpg", :alt => "q3", :class => 'q3_o  origin img-responsive' %>
       <%=image_tag "guess/q3_m.jpg", :alt => "q3", :class => 'q3_m  mistiness img-responsive' %>
     </div>
+    <div class="slideBtn">
+      <%=image_tag "guess/2.png", :alt => "slide"%>
+    </div>      
   </div>
 </div>
 
@@ -83,6 +108,9 @@
       <%=image_tag "guess/q4_o.jpg", :alt => "q4", :class => 'q4_o  origin img-responsive' %>
       <%=image_tag "guess/q4_m.jpeg", :alt => "q4", :class => 'q4_m  mistiness img-responsive' %>
     </div>
+    <div class="slideBtn">
+      <%=image_tag "guess/2.png", :alt => "slide"%>
+    </div>      
   </div>
 </div>
 
@@ -92,6 +120,9 @@
       <%=image_tag "guess/q5_o.jpg", :alt => "q5", :class => 'q5_o  origin img-responsive' %>
       <%=image_tag "guess/q5_m.jpg", :alt => "q5", :class => 'q5_m  mistiness img-responsive' %>
     </div>
+    <div class="slideBtn">
+      <%=image_tag "guess/2.png", :alt => "slide"%>
+    </div>      
   </div>
 </div>  
 
@@ -101,6 +132,9 @@
       <%=image_tag "guess/q6_o.jpg", :alt => "q6", :class => 'q6_o  origin img-responsive' %>
       <%=image_tag "guess/q6_m.jpg", :alt => "q6", :class => 'q6_m  mistiness img-responsive' %>
     </div>
+    <div class="slideBtn">
+      <%=image_tag "guess/2.png", :alt => "slide"%>
+    </div>      
   </div>
 </div> 
 
@@ -110,6 +144,9 @@
       <%=image_tag "guess/q7_o.jpg", :alt => "q7", :class => 'q7_o  origin img-responsive' %>
       <%=image_tag "guess/q7_m.jpg", :alt => "q7", :class => 'q7_m  mistiness img-responsive' %>
     </div>
+    <div class="slideBtn">
+      <%=image_tag "guess/2.png", :alt => "slide"%>
+    </div>      
   </div>
 </div> 
 
@@ -119,6 +156,9 @@
       <%=image_tag "guess/q8_o.jpg", :alt => "q8", :class => 'q8_o  origin img-responsive' %>
       <%=image_tag "guess/q8_m.jpg", :alt => "q8", :class => 'q8_m  mistiness img-responsive' %>
     </div>
+    <div class="slideBtn">
+      <%=image_tag "guess/2.png", :alt => "slide"%>
+    </div>      
   </div>
 </div>   
 <!-- question page end   -->
@@ -137,7 +177,8 @@
               <li class="list-group-item" data-name='question_1' data-value="0"><i class="ipt fa fa-circle-o"></i><span>范冰冰</span></li>
               <li class="list-group-item" data-name='question_1' data-value="0"><i class="ipt fa fa-circle-o"></i><span>黄圣依</span></li>
               <li class="list-group-item" data-name='question_1' data-value="0"><i class="ipt fa fa-circle-o"></i><span>杨幂</span></li>
-            </ul>           
+            </ul> 
+            <div class="slideUp"><%=image_tag "guess/1.png", :alt => "slide" %></div>
           </div>
 
           <div class="panel-body question_2">
@@ -146,7 +187,8 @@
               <li class="list-group-item" data-name='question_2' data-value="0"><i class="ipt fa fa-circle-o"></i><span>赵丽颖</span></li>
               <li class="list-group-item" data-name='question_2' data-value="10"><i class="ipt fa fa-circle-o"></i><span>范冰冰</span></li>
               <li class="list-group-item" data-name='question_2' data-value="0"><i class="ipt fa fa-circle-o"></i><span>林志玲</span></li>
-            </ul>           
+            </ul>  
+            <div class="slideUp"><%=image_tag "guess/1.png", :alt => "slide" %></div>        
           </div>
 
 
@@ -156,7 +198,8 @@
               <li class="list-group-item" data-name='question_3' data-value="0"><i class="ipt fa fa-circle-o"></i><span>刘诗诗</span></li>
               <li class="list-group-item" data-name='question_3' data-value="10"><i class="ipt fa fa-circle-o"></i><span>李冰冰</span></li>
               <li class="list-group-item" data-name='question_3' data-value="0"><i class="ipt fa fa-circle-o"></i><span>林心如</span></li>
-            </ul>           
+            </ul> 
+            <div class="slideUp"><%=image_tag "guess/1.png", :alt => "slide" %></div>         
           </div>
 
 
@@ -167,7 +210,8 @@
               <li class="list-group-item" data-name='question_4' data-value="0"><i class="ipt fa fa-circle-o"></i><span>吉莉安·莫菲</span></li>
               <li class="list-group-item" data-name='question_4' data-value="10"><i class="ipt fa fa-circle-o"></i><span>奥黛丽·赫本</span></li>
               <li class="list-group-item" data-name='question_4' data-value="0"><i class="ipt fa fa-circle-o"></i><span>艾薇儿</span></li>
-            </ul>            
+            </ul>   
+            <div class="slideUp"><%=image_tag "guess/1.png", :alt => "slide" %></div>         
           </div>
 
 
@@ -177,7 +221,8 @@
               <li class="list-group-item" data-name='question_5' data-value="10"><i class="ipt fa fa-circle-o"></i><span>anglelababy</span></li>
               <li class="list-group-item" data-name='question_5' data-value="0"><i class="ipt fa fa-circle-o"></i><span>李冰冰</span></li>
               <li class="list-group-item" data-name='question_5' data-value="0"><i class="ipt fa fa-circle-o"></i><span>范冰冰</span></li>
-            </ul>            
+            </ul>    
+            <div class="slideUp"><%=image_tag "guess/1.png", :alt => "slide" %></div>       
           </div>
 
 
@@ -187,7 +232,8 @@
               <li class="list-group-item" data-name='question_6' data-value="0"><i class="ipt fa fa-circle-o"></i><span>anglelababy</span></li>
               <li class="list-group-item" data-name='question_6' data-value="0"><i class="ipt fa fa-circle-o"></i><span>安以轩</span></li>
               <li class="list-group-item" data-name='question_6' data-value="0"><i class="ipt fa fa-circle-o"></i><span>柳岩</span></li>
-            </ul>           
+            </ul>  
+            <div class="slideUp"><%=image_tag "guess/1.png", :alt => "slide" %></div>       
           </div>
 
 
@@ -197,7 +243,8 @@
               <li class="list-group-item" data-name='question_7' data-value="10"><i class="ipt fa fa-circle-o"></i><span>阿曼达·塞弗里德</span></li>
               <li class="list-group-item" data-name='question_7' data-value="0"><i class="ipt fa fa-circle-o"></i><span>艾玛·沃特森</span></li>
               <li class="list-group-item" data-name='question_7' data-value="0"><i class="ipt fa fa-circle-o"></i><span>米兰达·可儿</span></li>
-            </ul>           
+            </ul> 
+            <div class="slideUp"><%=image_tag "guess/1.png", :alt => "slide" %></div>      
           </div>
 
 
@@ -207,7 +254,8 @@
               <li class="list-group-item" data-name='question_8' data-value="0"><i class="ipt fa fa-circle-o"></i><span>郑秀妍</span></li>
               <li class="list-group-item" data-name='question_8' data-value="10"><i class="ipt fa fa-circle-o"></i><span>佟丽娅</span></li>
               <li class="list-group-item" data-name='question_8' data-value="0"><i class="ipt fa fa-circle-o"></i><span>谢娜</span></li>
-            </ul>           
+            </ul>    
+            <div class="slideUp"><%=image_tag "guess/1.png", :alt => "slide" %></div>      
           </div>                                                            
 
         </div>

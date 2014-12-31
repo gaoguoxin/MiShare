@@ -25,7 +25,7 @@ html,body{
 				margin-bottom: 60px;
 				.btn.start{
 					margin-top:20px;
-					background: #75e3e0;
+					background: #f36f6e;
 					color:#fff;
 					text-decoration: none;
 				}
@@ -55,6 +55,7 @@ html,body{
 			.head{
 				padding:0px !important;
 				position:relative;
+				// @include clearfix;
 				img{
 					display:none;
 				}
@@ -72,7 +73,19 @@ html,body{
 					z-index: 2;
 				}				
 			}
-
+			.slideBtn{
+				width:100%;
+				z-index:3;
+				position:absolute;
+				bottom:10px;
+				display:none;
+				img{
+					display:block;
+					width:40px;
+					height:40px;
+					margin:0 auto;
+				}
+			}
 			.q-info{
 				color:#75e3e0;
 			}
@@ -155,12 +168,12 @@ html,body{
 				@include opacity(0.5);
 			}
 			span.score,span.percent{
-				color:#75e3e0;
+				color:#f36f6e;
 				font-size:24px;
 			}
 			.btn.btn-block{
 				margin-top:20px;
-				background:#75e3e0;
+				background:#f36f6e;
 				color:#fff;
 				&.social{
 					i{
@@ -200,7 +213,14 @@ html,body{
 		margin:0px;
 		.modal-content{
 			@include clearfix;
+			height:100%;
+			background:none !important;
+			.panel{
+				background:none !important;
+			}
 			.list-group-item{
+				background:none !important;
+				color:#fff;
 				i{
 					margin-right:6px;
 				}
@@ -208,6 +228,14 @@ html,body{
 					background:#eeeeee;
 					color:#777777;
 					border-color:#eeeeee;
+				}
+			}
+			.slideUp{
+				img{
+					display:block;
+					width:40px;
+					height:40px;
+					margin:0 auto;
 				}
 			}
 		}
